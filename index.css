@@ -1,0 +1,145 @@
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: xx-large;
+  background: url(bbb.jfif);
+  background-size: cover;
+}
+
+.btn {
+  background-color: #4a90e2; /* Light Blue */
+  color: white;
+}
+footer {
+  background: url(gray.webp);
+  background-size: cover;
+  border-top: 4px double #8f8e8e;
+}
+.btn:hover {
+  font-weight: bolder;
+  font-style: italic;
+  background: linear-gradient(50deg, blue, pink, red, green, black);
+}
+
+.skill-card {
+  background-color: #ffffff; /* White */
+  border: 1px solid #e0e0e0; /* Light Border */
+}
+
+.face {
+  width: 100px;
+}
+nav ul {
+  flex-grow: 1;
+}
+nav ul li {
+  padding: 10px;
+  flex-grow: 1;
+  font-size: x-large;
+}
+#hero {
+  background-image: url(woman.avif);
+  background-size: cover;
+}
+/* code */
+@keyframes borderMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+.moving-border {
+  padding: 7px; /* Border width */
+  border-radius: 8px;
+  background: linear-gradient(90deg, gray, #0ea5e9, #34d399, #8b5cf6, gray);
+  background-size: 200% 200%;
+  /* animation: borderMove 5s linear infinite; */
+}
+
+.moving-border-inner,
+header {
+  padding: 20px;
+  background: url(backpaint.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+header {
+  background: linear-gradient(50deg, white, gray, white);
+}
+.group {
+  height: fit-content;
+}
+#lottie-animation {
+  width: 416px;
+  height: 300px;
+  margin-bottom: -69px;
+}
+#contact button:last-child {
+  background-color: rgb(11, 4, 31);
+}
+#contact button:last-child:hover {
+  background-color: white;
+  border: 3px solid rgba(106, 74, 195, 0.211);
+  color: black;
+}
+@keyframes letter-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes word-fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.letter {
+  display: inline-block;
+  animation: letter-fade 3s infinite;
+}
+
+/* Letter animation delay for HELLO */
+.hello .letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.hello .letter:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.hello .letter:nth-child(3) {
+  animation-delay: 1s;
+}
+.hello .letter:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.hello .letter:nth-child(5) {
+  animation-delay: 2s;
+}
+
+/* Word animation delay for I am Lina Sadoun */
+.iam .word {
+  display: inline-block;
+  animation: word-fade 2s infinite;
+}
+.iam .word:nth-child(1) {
+  animation-delay: 0s;
+}
+.iam .word:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.iam .word:nth-child(3) {
+  animation-delay: 1s;
+}
+.iam .word:nth-child(4) {
+  animation-delay: 1.5s;
+}

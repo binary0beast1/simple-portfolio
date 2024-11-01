@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
+  </head>
+
+  <body>
+    <header class="p-6 text-center">
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+
+      <nav class="flex items-center justify-between">
+        <dotlottie-player
+          src="https://lottie.host/31b0c1dc-5ff1-45df-b96c-fa1200c8c554/QTcdtW0332.json"
+          background="transparent"
+          speed="1"
+          class="w-24 mb-4 md:mb-0"
+          direction="1"
+          playMode="normal"
+          loop
+          autoplay
+          hover
+        ></dotlottie-player>
+
+        <!-- Menu for large screens -->
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-gray-900 transition duration-300"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-gray-900 transition duration-300"
+            >
+              Projets
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-gray-900 transition duration-300"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Dropdown for medium and small screens -->
+        <label for="menu-select" class="sr-only"> Menu</label>
+        <select
+          id="menu-select"
+          class="block md:hidden p-2 border bg-gray-200 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-200"
+          onchange="location = this.value;"
+          aria-label="Navigation Menu"
+        >
+          <option value="">Menu</option>
+          <option
+            value="#home"
+            class="bg-gray-200 text-slate-800 hover:text-white hover:bg-gray-500"
+          >
+            Accueil
+          </option>
+          <option
+            value="#projects"
+            class="bg-gray-200 text-slate-800 hover:text-white hover:bg-gray-500"
+          >
+            Projets
+          </option>
+          <option
+            value="#contact"
+            class="bg-gray-200 text-slate-800 hover:text-white hover:bg-gray-500"
+          >
+            Contact
+          </option>
+        </select>
+        <dotlottie-player
+          src="https://lottie.host/31b0c1dc-5ff1-45df-b96c-fa1200c8c554/QTcdtW0332.json"
+          background="transparent"
+          speed="1"
+          class="w-24 mb-4 md:mb-0 hidden md:flex"
+          direction="1"
+          playMode="normal"
+          loop
+          autoplay
+          hover
+        ></dotlottie-player>
+      </nav>
+    </header>
+
+    <section
+      id="hero"
+      class="h-screen flex items-center justify-center bg-cover"
+    >
+      <div
+        class="text-center w-full flex flex-col items-center p-6 text-white bg-black bg-opacity-50 rounded"
+      >
+        <h2
+          class="text-5xl bg-gradient-to-r from-pink-800 via-white to-purple-950 bg-clip-text text-transparent hello"
+        >
+          <span class="letter">H</span>
+          <span class="letter">E</span>
+          <span class="letter">L</span>
+          <span class="letter">L</span>
+          <span class="letter">O</span>
+        </h2>
+        <h2
+          class="text-6xl bg-gradient-to-r from-pink-800 via-white to-purple-900 bg-clip-text text-transparent mt-4 iam"
+        >
+          <span class="word">I</span>
+          <span class="word">am</span>
+          <span class="word">Lina</span>
+          <span class="word">Sadoun</span>
+        </h2>
+        <p class="mt-4 text-lg text-white">Développeuse Web Passionnée</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="skills" class="p-2">
+      <div class="moving-border">
+        <div class="moving-border-inner">
+          <div class="text-center mb-2 p-2">
+            <h2
+              class="text-3xl text-gray-800 mt-2 flex items-center justify-center space-x-2 relative"
+            >
+              <!-- Icon with hover effect -->
+              <i
+                class="fas fa-tools text-gray-600 transition-transform duration-300 ease-in-out transform hover:text-white hover:scale-125"
+              ></i>
+
+              <!-- Heading Text -->
+              <span
+                class="px-4 transition-transform duration-300 ease-in-out transform hover:text-white"
+                >Compétences</span
+              >
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 p-4"
+      >
+        <!-- Skill Card 1 -->
+        <div
+          class="skill-card p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 text-center"
+        >
+          <i
+            class="fas fa-code text-4xl text-gray-600 mb-4 hover:text-gray-800"
+          ></i>
+          <h3 class="text-xl font-semibold text-gray-700 mt-2 mb-2">
+            Compétence 1
+          </h3>
+          <p class="text-gray-500">Une brève description</p>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div
+          class="skill-card p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 text-center"
+        >
+          <i
+            class="fas fa-paint-brush text-4xl text-gray-600 mb-4 hover:text-gray-800"
+          ></i>
+          <h3 class="text-xl font-semibold text-gray-700 mt-2 mb-2">
+            Compétence 2
+          </h3>
+          <p class="text-gray-500">Une brève description</p>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div
+          class="skill-card p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 text-center"
+        >
+          <i
+            class="fas fa-database text-4xl text-gray-600 mb-4 hover:text-gray-800"
+          ></i>
+          <h3 class="text-xl font-semibold text-gray-700 mt-2 mb-2">
+            Compétence 3
+          </h3>
+          <p class="text-gray-500">Une brève description</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="p-10">
+      <div class="moving-border mb-5 w-full">
+        <div class="moving-border-inner">
+          <div class="text-center p-2">
+            <h2
+              class="text-3xl text-gray-800 mt-2 flex items-center justify-center space-x-2 relative"
+            >
+              <!-- Icon with hover effect -->
+              <i
+                class="fas fa-briefcase text-gray-600 transition-transform duration-300 ease-in-out transform hover:text-white hover:scale-125"
+              ></i>
+              <!-- Changed to a briefcase icon -->
+
+              <!-- Heading Text -->
+              <span
+                class="px-4 transition-transform duration-300 ease-in-out transform hover:text-white"
+                >my projects</span
+              >
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Project Card 1 -->
+        <div
+          class="relative group border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <!-- Image with hover effect -->
+          <div class="relative rounded-t-xl">
+            <img
+              src="travel.jfif"
+              alt="Projet 1"
+              class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-75 transition-opacity"
+            ></div>
+          </div>
+          <!-- Content -->
+          <div class="p-6 text-center bg-black bg-opacity-20 dark:bg-gray-800">
+            <h3
+              class="text-3xl text-blue-400 hover:text-white dark:text-white mb-3"
+            >
+              TRAVEL WEBSITE
+            </h3>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Une brève description de TRAVEL
+            </p>
+            <div class="flex justify-between items-center">
+              <a
+                href="#"
+                class="text-gray-900 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 flex items-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2l7 7h-4v6h-6v-6h-4z" />
+                  <path d="M5 22h14v-2h-14z" />
+                </svg>
+                Voir plus
+              </a>
+              <span class="text-sm text-gray-500 dark:text-gray-400"
+                >Novembre 2024</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate Project Cards with Unique Content -->
+        <!-- Project Card 2 -->
+        <div
+          class="relative group border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="relative overflow-hidden rounded-t-xl">
+            <img
+              src="resto.jfif"
+              alt="Projet 2"
+              class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-75 transition-opacity"
+            ></div>
+          </div>
+          <div class="p-6 text-center bg-red-900 dark:bg-red-400">
+            <h3
+              class="text-1xl text-yellow-600 hover:text-white dark:text-white mb-2"
+            >
+              <i
+                class="fas text-green-600 hover:text-white transition-colors duration-300"
+              ></i>
+
+              RESTAURENT WEBSITE
+            </h3>
+            <p class="text-black-200 dark:text-black-200 mb-4">
+              Une brève description de RESTAURENT WEBSITE
+            </p>
+
+            <div class="flex justify-between items-center">
+              <a
+                href="#"
+                class="text-green-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 flex items-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2l7 7h-4v6h-6v-6h-4z" />
+                  <path d="M5 22h14v-2h-14z" />
+                </svg>
+                Voir plus
+              </a>
+              <span class="text-sm text-blue-300 dark:text-blue-300"
+                >Décembre 2024</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div
+          class="relative group border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="relative overflow-hidden rounded-t-xl">
+            <img
+              src="flowerjfif.jfif"
+              alt="Projet 3"
+              class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-75 transition-opacity"
+            ></div>
+          </div>
+          <div class="p-6 bg-pink-800 dark:bg-pink-800 text-center w-full">
+            <h2 class="text-red-400 hover:text-white text-4xl font-bold mb-2">
+              <i
+                class="fas fa-spa text-red-400 hover:text-white transition-colors duration-300"
+              ></i>
+              Flower shop
+            </h2>
+            <p class="text-gray-600">
+              Beautiful flower arrangements for any occasion.
+            </p>
+
+            <div class="flex justify-between items-center">
+              <a
+                href="#"
+                class="text-blue-400 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 flex items-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2l7 7h-4v6h-6v-6h-4z" />
+                  <path d="M5 22h14v-2h-14z" />
+                </svg>
+                Voir plus
+              </a>
+              <span class="text-sm text-gray-500 dark:text-gray-400"
+                >Janvier 2025</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="p-4">
+      <div class="moving-border mb-5 w-full">
+        <div class="moving-border-inner">
+          <div class="text-center p-2">
+            <h2
+              class="text-3xl text-gray-800 mt-2 flex items-center justify-center space-x-2 relative"
+            >
+              <!-- Icon with hover effect -->
+              <i
+                class="fas fa-phone text-gray-600 transition-transform duration-300 ease-in-out transform hover:text-white hover:scale-125"
+              ></i>
+
+              <!-- Changed to a briefcase icon -->
+
+              <!-- Heading Text -->
+              <span
+                class="px-4 transition-transform duration-300 ease-in-out transform hover:text-white"
+                >Contactez-moi
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- Responsive Flex Container -->
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-16"
+      >
+        <!-- Animation Container -->
+        <div id="lottie-animation"></div>
+
+        <!-- Lottie Animation Script -->
+        <script>
+          // Load and play the animation
+          lottie.loadAnimation({
+            container: document.getElementById("lottie-animation"), // The container to display the animation
+            renderer: "svg", // Rendering as SVG for high quality
+            loop: true, // Animation will loop continuously
+            autoplay: true, // Animation starts automatically
+            path: "https://assets3.lottiefiles.com/packages/lf20_z9ed2jna.json", // URL of the "girl studying" animation JSON
+          });
+        </script>
+
+        <!-- Contact Form with max-width for larger screens -->
+        <form class="mt-4 max-w-md w-full text-center">
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2">Nom:</label>
+            <input
+              type="text"
+              class="border rounded w-full p-2"
+              placeholder="Votre nom"
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2">Email:</label>
+            <input
+              type="email"
+              class="border rounded w-full p-2"
+              placeholder="Votre adresse e-mail"
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2">Message:</label>
+            <textarea
+              class="border rounded w-full p-2"
+              rows="4"
+              placeholder="Votre message"
+            ></textarea>
+          </div>
+          <!-- <button
+            type="submit"
+            class="bg-blue-500 text-white p-2 rounded w-full lg:w-auto hover:bg-blue-600 transition-colors"
+          >
+            Envoyer
+          </button> -->
+          <button
+            type="submit"
+            class="px-4 py-2 text-lg border-2 rounded-xl bg-cyan-400 text-white"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="p-6 text-center bg-gray-100">
+      <p class="text-lg text-gray-800 font-serif mb-4">
+        &copy; 2024
+        <span class="text-blue-300 hover:text-blue-800">LINA .</span> Tous
+        droits réservés.
+      </p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a
+          href="#"
+          class="text-blue-600 hover:text-blue-800 transform transition-transform duration-300 hover:scale-125"
+        >
+          <i class="fab fa-facebook fa-2x"></i>
+          <!-- Increased icon size -->
+        </a>
+        <a
+          href="#"
+          class="text-blue-400 hover:text-blue-600 transform transition-transform duration-300 hover:scale-125"
+        >
+          <i class="fab fa-twitter fa-2x"></i>
+          <!-- Increased icon size -->
+        </a>
+        <a
+          href="#"
+          class="text-pink-500 hover:text-pink-700 transform transition-transform duration-300 hover:scale-125"
+        >
+          <i class="fab fa-instagram fa-2x"></i>
+          <!-- Increased icon size -->
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
