@@ -56,7 +56,7 @@ nav ul li {
   border-radius: 8px;
   background: linear-gradient(90deg, gray, #0ea5e9, #34d399, #8b5cf6, gray);
   background-size: 200% 200%;
-  /* animation: borderMove 5s linear infinite; */
+  animation: borderMove 5s linear infinite; 
 }
 
 .moving-border-inner,
@@ -88,7 +88,7 @@ header {
 }
 @keyframes letter-fade {
   0% {
-    opacity: 0;
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -97,7 +97,7 @@ header {
 
 @keyframes word-fade {
   0% {
-    opacity: 0.5;
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -106,7 +106,7 @@ header {
 
 .letter {
   display: inline-block;
-  animation: letter-fade 3s infinite;
+  animation: letter-fade 4s infinite;
 }
 
 /* Letter animation delay for HELLO */
@@ -129,7 +129,7 @@ header {
 /* Word animation delay for I am Lina Sadoun */
 .iam .word {
   display: inline-block;
-  animation: word-fade 2s infinite;
+  animation: word-fade 4s infinite;
 }
 .iam .word:nth-child(1) {
   animation-delay: 0s;
